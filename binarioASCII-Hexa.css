@@ -1,0 +1,50 @@
+.oculto_inicial {
+	visibility:hidden;
+}
+
+.pixel_pantalla {
+	background-color: #FFFFFF;
+	width: 5px;
+	height: 15px;
+	border: none;
+}
+
+.boton_select_color {
+	background-color: #FFFFFF;
+	width: 35px;
+	height: 15px;
+	border: none;
+}
+
+.campo_color {
+	background-color: #FFFFFF;
+	width: 60px;
+	height: 15px;
+	border: 1px solid black;
+	border-radius: 2px;
+	font-weight: 900;
+	color: white;
+	text-align: center;
+}
+
+#frame_mem {
+	height: 220px;
+	width: 180px;
+	overflow: auto;
+	background: white;
+  }
+  
+#contenido_mem {
+	margin:20px;
+	height: 220px;
+	width: 140px;
+	background-color: white;
+}
+
+#result {
+	display:block;
+	width:400px;
+	height:200px;
+}
+  
+

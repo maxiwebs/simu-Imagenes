@@ -1,0 +1,106 @@
+<html>
+<head>
+<title>BinarioASCII-Hexa</title>
+<link rel="stylesheet" type="text/css" media="screen" href="binarioASCII-Hexa.css" />
+<script  type="text/javascript" src="binarioASCII-Hexa.js"></script>
+</head>
+
+<table id="generar_cargar">
+  <tr>
+    <td>
+      <table>
+        <tr>
+          <td>Bits por color: </td>
+          <td><input type="text" size= "4" maxlength="1" id="tamanio_palabra" value=2></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td style="text-align:right">
+            <div id="boton_cargar_codificacion">
+              <input type="button" value="Generar" onclick="generar_instancia_vacia()">
+            </div>
+          </td>
+        </tr>
+      </table>      
+    </td>
+    <td>
+      <table>
+        <tr>
+          <td>
+            <input type="file" id="selectFiles" value="Import" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button id="import" onclick="cargar_desde_json()">Abrir imagen</button>
+          </td>
+        </tr>
+      </table>    
+    </td>
+  </tr>
+</table>
+
+<table id="campo_color_actual" class="oculto_inicial">
+  <tr>
+    <td>Color Actual: </td>
+    <td valign = "top">
+      <div id="div_color_actual"></div>
+    </td>
+  </tr>
+</table>
+
+  <table class="oculto_inicial">
+    <tr>
+      <td valign = "top">
+        <table id="tabla_generar_codificacion" >
+          <tr>
+            <td><div id="tabla_campos_codificacion">Codificación</div></td>
+            <td></td>
+          </tr>
+        </table>
+        <table id ="boton_actualizar" class="oculto_inicial">
+          <tr>
+            <td></td>
+            <td></td>
+            <td valign = "top" halign = "right">
+              <div>
+                <input type="button" value="Actualizar" onclick="actualizar_codificacion()">
+              </div>
+            </td>
+          </tr>
+        </table>
+      </td>
+
+      <td valign = "top">
+        <table id="tabla_salidas" class="oculto_inicial">
+          <tr>
+            <td valign = "top">
+              <div id="tabla_pantalla">Pantalla</div>
+            </td>
+            <td>Vista RAM
+              <div id="frame_mem">
+                <div id="contenido_mem">
+                  <div id="tabla_memoria">
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td valign = "top">
+              <div id="botones_limpiar" >
+                <input type="button" value="Limpiar" onclick="limpiar_todo()">
+                <button onClick="window.location.reload();">Reiniciar</button>
+              </div>
+            </td>    
+            <td><input type="button" value="Grabar imagen" onclick="exportar_json()"></td>    
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+
+
